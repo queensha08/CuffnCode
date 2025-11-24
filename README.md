@@ -18,7 +18,7 @@ A reproducible, low-noise analog front end for millivolt bridge sensors (e.g., M
 
 DC simulation with TINA-TI:
 
-<img src="https://github.com/auralius/afe-ref-design/blob/main/images/AFE.png" width="600"> 
+<img src="./images/AFE.png" width="600"> 
 
 Instrumentation amplifier gain:
 
@@ -33,7 +33,7 @@ $$ \frac{56 \text{k}}{47\text{k} + 56 \text{k}} \times 3.3 V \approx 1.5 V$$
 ### MPS20N0040D
 The MPS20N0040D is a millivolt-level bridge (≈50–100 mV full-scale; 4–6 kΩ)
 
-| <img src="https://github.com/auralius/afe-ref-design/blob/main/images/mps20n0040d_1.png" width="300"> | <img src="https://github.com/auralius/afe-ref-design/blob/main/images/mps20n0040d_2.png" width="300"> |
+| <img src="./images/mps20n0040d_1.png" width="300"> | <img src="./images/mps20n0040d_2.png" width="300"> |
 | ----------------------------------------- | ----------------------------------------- |
 
 ### TLC2272 (Dual, Low-Noise, Rail-To-Rail Operational Amplifier)
@@ -44,13 +44,13 @@ This will be used to offset the instrumentation amplifier, giving headroom for p
 ### AD620
 This is the instrumentation amplifier that is relatively cheap and widely available in Indonesian market.
 
-| <img src="https://github.com/auralius/afe-ref-design/blob/main/images/ad620_1.png" width="150"> | <img src="https://github.com/auralius/afe-ref-design/blob/main/images/ad620_2.png" width="150"> |
+| <img src="./images/ad620_1.png" width="150"> | <img src="./images/ad620_2.png" width="150"> |
 | ----------------------------------------- | ----------------------------------------- |
 
 ## Digital Controller
 We will use STM32F411CE (the black pill) as our digital processor.
 
-| <img src="https://github.com/auralius/afe-ref-design/blob/main/images/prototype1.png" width="250"> | <img src="https://github.com/auralius/afe-ref-design/blob/main/images/prototype2.png" width="330"> |
+| <img src="./images/prototype1.png" width="250"> | <img src="./images/prototype2.png" width="330"> |
 | ----------------------------------------- | ----------------------------------------- |
 
 ## Safety & Notes
