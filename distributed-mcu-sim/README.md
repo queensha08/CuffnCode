@@ -72,14 +72,13 @@ This system is fully simulated using Python, without requiring physical hardware
 ## 3. System Architecture
 
 The system is designed as a sequential distributed pipeline simulating MCU-based embedded processing nodes:
-
-```mermaid
-graph LR
-    A[Node 1: Signal Acquisition] --> B[Node 2: Feature Extraction]
-    B --> C[Node 3: Anomaly Detection]
-    C --> D[Node 4: Classification]
-    D --> E[Node 5: Output & Logging]
-    E --> F[Streamlit SCADA Dashboard]
+    ```mermaid
+    graph LR
+        A[Node 1: Signal Acquisition] --> B[Node 2: Feature Extraction]
+        B --> C[Node 3: Anomaly Detection]
+        C --> D[Node 4: Classification]
+        D --> E[Node 5: Output & Logging]
+        E --> F[Streamlit SCADA Dashboard]
    
 Each node is responsible for a specific stage of computation, mimicking real embedded MCU task partitioning.
 
@@ -187,39 +186,38 @@ pip install streamlit numpy pandas
 streamlit run app.py
 
 ---
-```md id="treefix"
+
 ## 11. Project Structure
 
-```text
 DISTRIBUTED-MCU-SIM/
 │
-├── app.py                     # STREAMLIT DASHBOARD (UI layer)
-├── main.py                    # SINGLE PIPELINE TEST RUNNER
-├── run_system.py              # SYSTEM LAUNCHER (dashboard + tools)
+├── app.py                         # STREAMLIT DASHBOARD (UI layer)
+├── main.py                        # SINGLE PIPELINE TEST RUNNER
+├── run_system.py                  # SYSTEM LAUNCHER (dashboard + tools)
 │
 ├── core/
-│   ├── pipeline.py            # orchestrator (MCU chain logic)
-│   └── metrics.py             # latency & throughput calculator
+│   ├── pipeline.py                # orchestrator (MCU chain logic)
+│   └── metrics.py                 # latency & throughput calculator
 │
 ├── nodes/
-│   ├── acquisition.py         # Node 1: sensor simulation
-│   ├── feature.py             # Node 2: feature extraction
-│   ├── anomaly.py             # Node 3: anomaly detection
-│   ├── classifier.py          # Node 4: classification
-│   └── output.py              # Node 5: output formatter
+│   ├── acquisition.py             # Node 1: sensor simulation
+│   ├── feature.py                 # Node 2: feature extraction
+│   ├── anomaly.py                 # Node 3: anomaly detection
+│   ├── classifier.py              # Node 4: classification
+│   └── output.py                  # Node 5: output formatter
 │
 ├── simulator/
-│   └── signal.py              # synthetic sensor generator
+│   └── signal.py                  # synthetic sensor generator
 │
 ├── monitoring/
-│   ├── logger.py              # CSV telemetry logging system
-│   └── event_bus.py           # inter-node communication
+│   ├── logger.py                  # CSV telemetry logging system
+│   └── event_bus.py               # inter-node communication (simulated)
 │
 ├── benchmark/
-│   └── benchmark.py           # performance evaluation
+│   └── benchmark.py               # performance evaluation (latency/throughput)
 │
 ├── logs/
-│   └── system_log.csv         # runtime telemetry
+│   └── system_log.csv             # generated runtime telemetry
 │
 └── docs/
     ├── architecture.md
